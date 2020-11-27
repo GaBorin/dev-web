@@ -1,3 +1,3 @@
 <?php
-include_once("news.html");
+include_once("ativ1.html");
 ?>
