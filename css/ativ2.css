@@ -1,3 +1,7 @@
+.dark-purple {
+	color: #330080;
+}
+
 body {
 	padding: 2rem;
 }
@@ -7,10 +11,12 @@ body {
 }
 
 h4 {
+	color: #6600ff; /*50% #6600ff*/
 	padding: 0.3rem;
 }
 
 h5 {
+	color: #6600ff; /*50% #6600ff*/
 	padding: 0.3rem;
 }
 
@@ -20,20 +26,22 @@ img {
 
 th{
   text-align: center;
-  background-color: #e6e6e6;
+  background-color: #d1b3ff; /*85% #6600ff*/
 }
 
 th:nth-child(even) {
-  background-color: #bfbfbf;
+  background-color: #b380ff; /*75% #6600ff*/
 }
 
 table {
+	color: #330080; /*25% #6600ff*/
 	width: 100%;
 	border-spacing: 5px;
 	border-collapse: collapse;
 }
 
 footer {
+	color: #330080; /*25% #6600ff*/
   	text-align: center;
-  	background-color: #f2f2f2;
+  	background-color: #f0e6ff; /*95% #6600ff*/
 }
