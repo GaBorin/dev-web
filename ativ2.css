@@ -17,3 +17,23 @@ h5 {
 img {
 	padding: 1rem;
 }
+
+th{
+  text-align: center;
+  background-color: #e6e6e6;
+}
+
+th:nth-child(even) {
+  background-color: #bfbfbf;
+}
+
+table {
+	width: 100%;
+	border-spacing: 5px;
+	border-collapse: collapse;
+}
+
+footer {
+  	text-align: center;
+  	background-color: #f2f2f2;
+}
