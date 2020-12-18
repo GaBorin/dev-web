@@ -1,17 +1,15 @@
 .purple {
 	color: #b366ff;
+	padding: inherit;
 }
 
 h1 {
-	/*color: white;*/
-	font-family: fangsong;
+	font-family: cursive;
 	font-variant: small-caps;
-	font-size: xxx-large;
 	padding: 1rem;
 }
 
 p {
-	/*color: white;*/
 	font-family: monospace;
 	font-size: larger;
 	padding: 3rem;
