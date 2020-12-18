@@ -2,12 +2,8 @@
 	color: #b366ff;
 }
 
-body {
-	background-color: black;
-}
-
 h1 {
-	color: white;
+	/*color: white;*/
 	font-family: fangsong;
 	font-variant: small-caps;
 	font-size: xxx-large;
@@ -15,7 +11,7 @@ h1 {
 }
 
 p {
-	color: white;
+	/*color: white;*/
 	font-family: monospace;
 	font-size: larger;
 	padding: 3rem;
