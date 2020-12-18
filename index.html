@@ -4,37 +4,23 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/about.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<!-- Bootstrap CSS -->
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	</head>
 
 	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		  <div class="container-fluid">
-		    <a class="navbar-brand" href="https://ttc-dev-web.herokuapp.com/index.html">Home Sweet Home</a>
-		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-		      <span class="navbar-toggler-icon"></span>
-		    </button>
+		<!--Navigation bar-->
+		<div id="nav-placeholder">
 
-		    <div class="collapse navbar-collapse" id="navbarText">
-		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-		        <li class="nav-item">
-		          <a class="nav-link" href="https://ttc-dev-web.herokuapp.com/photos.html">Photos</a>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" href="https://ttc-dev-web.herokuapp.com/others.html">Others</a>
-		        </li>
+		</div>
 
-		        <li class="nav-item">
-		          <a class="nav-link" href="https://ttc-dev-web.herokuapp.com/about.html">About</a>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" href="https://ttc-dev-web.herokuapp.com/contact.html">Contact</a>
-		        </li>
-		      </ul>
-		   
-		    </div>
-		  </div>
-		</nav>
+		<script>
+		$(function(){
+		  $("#nav-placeholder").load("nav.html");
+		});
+		</script>
+		<!--end of Navigation bar-->
 
 		<h1>Activities List</h1>
 
@@ -48,7 +34,7 @@
 		  <li class="list-group-item">
 		  	<a href=https://ttc-dev-web.herokuapp.com/index.html class="purple">Atividade 3: Site com 5 abas</a>
 		  </li>
-		  <li class="list-group-item">Vestibulum at eros</li>
+
 		</ul>
 		
 	</body>
