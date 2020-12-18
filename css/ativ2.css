@@ -1,13 +1,15 @@
+/*ref purpple: #6600ff*/
+
+.info {
+	margin-left: 20rem;
+}
+
 .dark-purple {
-	color: #330080;
+	color: #330080; /*25% #330080*/
 }
 
 body {
 	padding: 2rem;
-}
-
-.info {
-	margin-left: 20rem;
 }
 
 h4 {
