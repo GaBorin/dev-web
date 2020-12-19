@@ -37,3 +37,7 @@ p {
   line-height: inherit;
   white-space: nowrap;
 }
+
+.center {
+    margin-left: auto;
+}
