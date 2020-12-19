@@ -1,3 +1,3 @@
 <?php
-include_once("ativ1.html");
+include_once("index.html");
 ?>
