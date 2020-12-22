@@ -6,7 +6,11 @@
 h1 {
 	font-family: cursive;
 	font-variant: small-caps;
-	padding: 1rem;
+}
+
+h3 {
+	font-family: cursive;
+	font-variant: small-caps;
 }
 
 p {
@@ -63,4 +67,25 @@ p {
   .navbar-expand-lg .navbar-toggler {
     display: none;
   }
+}
+
+.email-form {
+	padding: 5% 33%;
+}
+
+.page-footer {
+	position: absolute;
+   	bottom: 0;
+   	width: 100%;
+   	height: 5rem;
+
+    background-color: #666666;
+    color: #fff;
+
+    padding: 1.5% 5%;
+    text-align: center;
+}
+
+.page-footer a {
+    color: #fff;
 }
