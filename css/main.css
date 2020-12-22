@@ -43,7 +43,7 @@ p {
 }
 
 .center {
-    margin-left: auto; /* centralizar as abas do navbar */
+    margin: auto;
 }
 
 .email-form {

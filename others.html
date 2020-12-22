@@ -59,8 +59,13 @@
     -->
   </body>
 
-  <footer class="page-footer">
-    This app is hosted on a
-    <a href="https://www.heroku.com/free">Heroku Free Dyno</a>.
-  </footer>
+  <!--Footer bar-->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    $(function(){
+      $("#footer-placeholder").load("footer.html");
+    });
+  </script>
+  <!--end of Footer bar-->
 </html>
