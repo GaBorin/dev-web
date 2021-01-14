@@ -9,32 +9,72 @@
 
 	<body>
 		<h4>ATIVIDADES PHP BÁSICO</h4>
-
 		<div class="dark-purple">
-			1) Programa para calcular o consumo médio de combustível (variáveis estáticas)
-			Exemplo: $litros=10; $km=15;
-			<br>
-			2) COVID-19: Programa que estima quantos alunos podem ficar dentro de uma sala de aula. Para evitar o contato, é preciso respeitar distância mínima entre as cadeiras, de 1,0m a 1,5 m. Neste cenário, é necessário garantir pelo menos 2,25m2 por aluno. O usuário deve informar a largura e comprimento do local. Considere a área retangular.
-			<br>
-			3) Faça um programa que calcule a área de um trapézio e o volume de uma pirâmide. Usar dados estáticos.
-			<br>
-			4) Programa para classificar um triângulo. Informe os tamanhos dos segmentos (a,b,c) e classifique de acordo com equilátero, isósceles e escaleno.
-			<br>
-			5) Programa para calcular a série de Fibonacci: O termo estático e imprima a série.
+			<form action="ativ5.php" method="post">
+				1) Programa para calcular o consumo médio de combustível (variáveis estáticas)
+				Exemplo: $litros=10; $km=15;
+				<br>
+				<label for="litros">Litros:</label>
+				<br>
+				<input type="number" id="litros" name="user">
+				<br>
+				<label for="km">Quilometragem:</label>
+				<br>
+				<input type="number" id="km" name="user">
+				<br>
+				<br>
+
+				2) COVID-19: Programa que estima quantos alunos podem ficar dentro de uma sala de aula. Para evitar o contato, é preciso respeitar distância mínima entre as cadeiras, de 1,0m a 1,5 m. Neste cenário, é necessário garantir pelo menos 2,25m2 por aluno. O usuário deve informar a largura e comprimento do local. Considere a área retangular.
+				<br>
+				<label for="largura">Largura:</label><br>
+				<br>
+				<input id="largura" name="largura" type="number">
+				<br>
+				<label for="comprimento">Comprimento:</label><br>
+				<br>
+				<input id="comprimento" name="comprimento" type="number">
+				<br>
+				<br>
+
+				3) Faça um programa que calcule a área de um trapézio e o volume de uma pirâmide. Usar dados estáticos.
+				<br>
+				<label for="num">Base Maior:</label>
+				<br>
+				<input id="B" name="num" type="number">
+				<br>
+
+				<label for="num">Base Menor:</label>
+				<br>
+				<input id="b" name="num" type="number">
+				<br>
+
+				<label for="num">Altura:</label>
+				<br>
+				<input id="h" name="num" type="number">
+				<br>
+				<br>
+
+				4) Programa para classificar um triângulo. Informe os tamanhos dos segmentos (a,b,c) e classifique de acordo com equilátero, isósceles e escaleno.
+				<br>
+				<label for="ladoA">Lado A:</label>
+				<br>
+				<input id="ladoA" name="ladoA" type="number">
+				<br>
+				<label for="ladoB">Lado B:</label>
+				<br>
+				<input id="ladoB" name="ladoB" type="number">
+				<br>
+				<label for="ladoB">Lado C:</label>
+				<br>
+				<input id="ladoC" name="ladoB" type="number">
+				<br>
+				<br>
+
+				5) Programa para calcular a série de Fibonacci: O termo estático e imprima a série.
+				<br>
+				<br>
+				<input type="submit" value="Submit">
+			</form> 
 		</div>
-
-		<form action="ativ5.php" method="post">
-		  <label for="user">User:</label><br>
-		  <input type="text" id="user" name="user"><br>
-		  <label for="age">Age:</label><br>
-		  <input id="age" name="age" type="number"><br><br>
-		    <label for="num">Number:</label><br>
-		  <input id="num" name="num" type="number"><br><br>
-		  <label for="pwd">PWD:</label><br>
-		  <input id="pwd" name="pwd" type="password">
-
-		  <input type="submit" value="Submit">
-		</form> 
-		
 	</body>
 </html>
