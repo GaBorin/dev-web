@@ -14,8 +14,8 @@
 				1) Programa para calcular o consumo médio de combustível (variáveis estáticas)
 				Exemplo: $litros=10; $km=15;
 				<br>
-				<p style="margin-left: 40px">Quilometros por Litro:</p>
-				<?php 
+				<?php
+					echo '<p style="margin-left: 40px">Quilometros por Litro:</p>';
 					$litros = $_POST['litros'];
 					$km = $_POST['km'];
 					$km_litro = $km/$litros;
@@ -26,8 +26,8 @@
 
 				2) COVID-19: Programa que estima quantos alunos podem ficar dentro de uma sala de aula. Para evitar o contato, é preciso respeitar distância mínima entre as cadeiras, de 1.0m a 1.5 m. Neste cenário, é necessário garantir pelo menos 2.25m2 por aluno. O usuário deve informar a largura e comprimento do local. Considere a área retangular.
 				<br>
-				<p style="margin-left: 40px">Quantidade máxima de alunos:</p>
-				<?php 
+				<?php
+					echo '<p style="margin-left: 40px">Quantidade máxima de alunos:</p>';
 					$area = $_POST['largura']*$_POST['comprimento'];
 					$qntd_alunos = $area/2.25;
 					echo $qntd_alunos;
@@ -37,14 +37,14 @@
 
 				3) Faça um programa que calcule a área de um trapézio e o volume de uma pirâmide. Usar dados estáticos.
 				<br>
-				<p style="margin-left: 40px">Area do trapézio:</p>
-				<?php 
+				<?php
+				echo '<p style="margin-left: 40px">Area do trapézio:</p>';
 					$area_trapezio = ($_POST['B']+$_POST['b'])*$_POST['h']/2;
 					echo $area_trapezio;
 				?>
 				<br>
-				<p style="margin-left: 40px">Volume pirâmide:</p>
-				<?php 
+				<?php
+					echo '<p style="margin-left: 40px">Volume pirâmide:</p>';
 					$volume_piramide = $_POST['area_base']*$_POST['H']/3;
 					echo $volume_piramide;
 				?>
@@ -53,8 +53,8 @@
 
 				4) Programa para classificar um triângulo. Informe os tamanhos dos segmentos (a,b,c) e classifique de acordo com equilátero, isósceles e escaleno.
 				<br>
-				<p style="margin-left: 40px">Triângulo é </p>
-				<?php 
+				<?php
+				echo '<p style="margin-left: 40px">Triângulo é </p>';
 					$a = $_POST['ladoA'];
 					$b = $_POST['ladoB'];
 					$c = $_POST['ladoC'];
@@ -72,9 +72,8 @@
 
 				5) Programa para calcular a série de Fibonacci: O termo estático e imprima a série.
 				<br>
-				<p style="margin-left: 40px">Série de Fibonacci:</p>
-				<br>
 				<?php
+				echo'<p style="margin-left: 40px">Série de Fibonacci:</p>';
 					$N = $_POST['N'];
 
 					$x = 0;
