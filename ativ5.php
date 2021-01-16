@@ -1,76 +1,96 @@
-<html>
-  <head>
-    <title>PHP Test</title>
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/ativ2.css">
 
-    <p>Hello World1</p>
+		<a href=https://ttc-dev-web.herokuapp.com/index.html>Home</a>
+	</head>
 
-    <?php 
+	<body>
+		<h4>ATIVIDADES PHP BÁSICO</h4>
+		<div class="dark-purple">
+			<form action="ativ5.php" method="post">
+				1) Programa para calcular o consumo médio de combustível (variáveis estáticas)
+				Exemplo: $litros=10; $km=15;
+				<br>
+				<p style="margin-left: 40px">Quilometros por Litro:</p>
+				<?php 
+					$litros = $_POST['litros'];
+					$km = $_POST['km'];
+					$km_litro = $km/$litros;
+					echo intval($km_litro);
+				?>
+				<br>
+				<br>
 
-    echo $_POST['user']."<br>";
-    echo $_POST['age']."<br>";
+				2) COVID-19: Programa que estima quantos alunos podem ficar dentro de uma sala de aula. Para evitar o contato, é preciso respeitar distância mínima entre as cadeiras, de 1.0m a 1.5 m. Neste cenário, é necessário garantir pelo menos 2.25m2 por aluno. O usuário deve informar a largura e comprimento do local. Considere a área retangular.
+				<br>
+				<p style="margin-left: 40px">Quantidade máxima de alunos:</p>
+				<?php 
+					$area = $_POST['largura']*$_POST['comprimento'];
+					$qntd_alunos = $area/2.25;
+					echo $qntd_alunos;
+				?>
+				<br>
+				<br>
 
+				3) Faça um programa que calcule a área de um trapézio e o volume de uma pirâmide. Usar dados estáticos.
+				<br>
+				<p style="margin-left: 40px">Area do trapézio:</p>
+				<?php 
+					$area_trapezio = ($_POST['B']+$_POST['b'])*$_POST['h']/2;
+					echo $area_trapezio;
+				?>
+				<br>
+				<p style="margin-left: 40px">Volume pirâmide:</p>
+				<?php 
+					$volume_piramide = $_POST['area_base']*$_POST['H']/3;
+					echo $volume_piramide;
+				?>
+				<br>
+				<br>
 
-    echo $_POST['pwd']."<br>";
+				4) Programa para classificar um triângulo. Informe os tamanhos dos segmentos (a,b,c) e classifique de acordo com equilátero, isósceles e escaleno.
+				<br>
+				<p style="margin-left: 40px">Triângulo é </p>
+				<?php 
+					$a = $_POST['ladoA'];
+					$b = $_POST['ladoB'];
+					$c = $_POST['ladoC'];
 
-    $numero = $_POST['num'];
+					if ( $a >= $b + $c or $b >= $a + $c or $c >= $a + $b) echo 'não forma um triângulo';
+					else{
+						if ( $a == $b and $b == $c ) echo 'equilátero';
+						else if ( $a == $b or $a == $c or $b == $c) echo 'isósceles';
+						else echo 'escaleno';
+					}
+				?>
 
-    //$_GET['name'];
+				<br>
+				<br>
 
-    //PAR
-    if($numero%2==0)
-    {
-      echo "O numero ". $numero ."eh PAR<br>";
-    }
-    else
-    {
-      echo "O numero ". $numero ." eh IMPAR<br>";
-    }
+				5) Programa para calcular a série de Fibonacci: O termo estático e imprima a série.
+				<br>
+				<p style="margin-left: 40px">Série de Fibonacci:</p>
+				<br>
+				<?php
+					$N = $_POST['N'];
 
-    /* VERIFICAR SE EH PRIMO */
-    $primo = 1;
-    $n = $numero-1;
-    while($n > 1){
-      if (($numero%$n)==0)
-      {
-        $primo = -1;
-      }
-      $n--;
-    }
+					$x = 0;
+					$y = 1;
+					if ($N >= 1) echo $x.' ';
+					if ($N >= 2) echo $y.' ';
 
-    if($primo==1)
-      echo "<br> ".$numero." EH primo <br>";
-    else
-      echo "<br>".$numero."  NAO EH primo <br>";
+					for ($i = 3; $i <= $N; $i++) {
+						$aux = $y;
+						$y = $x + $y;
+						$x = $aux;
 
-
-    for($x=$numero;$x>0;$x--){
-      echo $x . " ";
-
-    }
-
-
-
-$x = 1;
- 
-while($x <= 5) {
-  echo "The number is: $x <br>";
-  $x++;
-} 
-
-
-    
-    $idade = 16;
-    echo $user = $idade>=18 ? "pode comprar" : "chama o papai";
-
-      $x=4;
-      if ($x==1)
-          echo '<p>Hello World2</p>'; 
-      else
-          echo '<p>Hi World3</p>'; 
-    
-    ?> 
-
-  </body>
+					    echo $y.' ';
+					}
+				?>
+			</form> 
+		</div>
+  	</body>
 </html>
