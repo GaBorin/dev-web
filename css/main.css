@@ -47,20 +47,19 @@ p {
 }
 
 .email-form {
-	padding: 1% 35%;
+	padding: 1% 30%;
 }
 
 .page-footer {
-	position: absolute;
-   	bottom: 0;
-   	width: 100%;
-   	height: 5rem;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
 
-    background-color: #666666;
-    color: #fff;
+  background-color: #666666;
+  color: #fff;
 
-    padding: 1.5% 5%;
-    text-align: center;
+  padding: 1.5% 5%;
+  text-align: center;
 }
 
 .page-footer a {
