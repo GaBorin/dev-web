@@ -47,20 +47,56 @@
       </div>
     </nav>
 
-    <div class="dark-purple">
-		<form action="ativ7.php" method="post">
-			<input type="submit" value="Submit">
-		</form> 
-	</div>
+    <h1 class="email-form"> Operações no banco </h1>
 
-	<?php
-		include('connectionBD.php');
-	?>
+    <div class="input-group mb-3 bd-form">
+      <label class="input-group-text" for="inputGroupSelect01">Ação</label>
+      <select class="form-select" id="inputOperacao" name="inputOperacao">
+        
+        <option value="1">Insert</option>
+        <option value="2">Delete</option>
+        <option value="3">Edit</option>
+      </select>
+    </div>
+
+    <div class="input-group mb-3 bd-form">
+      <span class="input-group-text" id="inputGroup-sizing-default">Tabela</span>
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+
+      <span class="input-group-text" id="inputGroup-sizing-default">Dados</span>
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Send</button>
+    </div>
+
+    <?php
+      $operacao = $_POST['inputOperacao'];
+
+      if($operacao){
+      	require('connectionBD.php');
+        echo '<h2> operacao </h2>';
+        switch ($operacao) {
+	        case '1':
+	            echo 'this is value1<br/>';
+	            break;
+	        case '2':
+	            echo 'value2<br/>';
+	            break;
+	        case '3':
+	            echo 'value3<br/>';
+	            break;
+	        default:
+	            # code...
+	            break;
+	    }
+      } else {
+      	echo 'deu ruim rapaize';
+      }
+    ?>
 
   </body>
 
   <footer class="page-footer">
-		This app is hosted on a
-		<a href="https://www.heroku.com/free">Heroku Free Dyno</a>.
-  </footer>
+  This app is hosted on a
+  <a href="https://www.heroku.com/free">Heroku Free Dyno</a>.
+</footer>
 </html>

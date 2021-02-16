@@ -1,5 +1,5 @@
 <?php
-	$link = new mysqli_connect('localhost', '242517', process.env.BD_PASSWORD, '242517');
+	$link = new mysqli_connect('localhost', 242517, process.env.BD_PASSWORD, 242517);
 	if (!$link) {
 	    echo "Error: Unable to connect to MySQL." . PHP_EOL;
 	    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
