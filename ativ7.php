@@ -92,7 +92,7 @@
         switch ($operacao) {
           case 'insert':
 
-          	  $sql = 'INSERT INTO users (username, email, password) VALUES (\'' . $username . '\', \'' . $email . '\', \'' . $senha . '\')';
+          	  $sql = "INSERT INTO users (username, email, password) VALUES ('" . $username . "', '" . $email . "', '" . $senha . "')";
               
               echo '<h5 class="bd-form">' . $sql . '</h5>';
               
