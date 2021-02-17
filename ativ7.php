@@ -47,56 +47,96 @@
       </div>
     </nav>
 
-    <h1 class="email-form"> Operações no banco </h1>
+    <h1 class="bd-form"> DB managment </h1>
 
-    <div class="input-group mb-3 bd-form">
-      <label class="input-group-text" for="inputGroupSelect01">Ação</label>
-      <select class="form-select" id="inputOperacao" name="inputOperacao">
+    <form method="post" action="ativ7.php">
+      <div class="input-group mb-3 bd-form">
+        <label class="input-group-text" for="inputGroupSelect01">Operation</label>
+        <select class="form-select" id="inputOperacao" name="inputOp">
+          <option selected>Escolha...</option>
+          <option value="insert">Insert</option>
+          <option value="delete">Delete</option>
+          <option value="edit">Edit</option>
+        </select>
+
+        <span class="input-group-text" id="inputGroup-sizing-default">Username</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="inputUsername">
+      </div>
+
+      <div class="input-group mb-3 bd-form">
         
-        <option value="1">Insert</option>
-        <option value="2">Delete</option>
-        <option value="3">Edit</option>
-      </select>
-    </div>
 
-    <div class="input-group mb-3 bd-form">
-      <span class="input-group-text" id="inputGroup-sizing-default">Tabela</span>
-      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <span class="input-group-text" id="inputGroup-sizing-default">E-mail</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="inputEmail">
 
-      <span class="input-group-text" id="inputGroup-sizing-default">Dados</span>
-      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-      <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Send</button>
-    </div>
+        <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="inputPassword">
 
-    <?php
-      $operacao = $_POST['inputOperacao'];
+        <input class="btn btn-outline-secondary" type="submit" value="Submit">
+      </div>
+    </form>
+	<?php
+      $operacao = $_POST['inputOp'];
+      $username = $_POST['inputUsername'];
+      $email = $_POST['inputEmail'];
+      $senha = $_POST['inputPassword'];
+
+      //echo '<h3> op:' . $operacao . '</h3>';
+      //echo '<h3> username:' . $username . '</h3>';
+      //echo '<h3> email:' . $email . '</h3>';
+      //echo '<h3> senha:' . $senha . '</h3>';
 
       if($operacao){
-      	require('connectionBD.php');
-        echo '<h2> operacao </h2>';
-        switch ($operacao) {
-	        case '1':
-	            echo 'this is value1<br/>';
-	            break;
-	        case '2':
-	            echo 'value2<br/>';
-	            break;
-	        case '3':
-	            echo 'value3<br/>';
-	            break;
-	        default:
-	            # code...
-	            break;
-	    }
-      } else {
-      	echo 'deu ruim rapaize';
-      }
-    ?>
+        require('connectionDB.php');
 
+        switch ($operacao) {
+          case 'insert':
+
+          	  $sql = 'INSERT INTO users (username, email, password) VALUES (\'' . $username . '\', \'' . $email . '\', \'' . $senha . '\')';
+              
+              echo '<h5 class="bd-form">' . $sql . '</h5>';
+              
+              if (mysqli_query($link, $sql)) {
+			    echo "New record created successfully";
+			  } else {
+			    echo "Error: " . $sql . "<br>" . mysqli_error($link);
+			  }
+              /*
+              if (mysqli_query($link, $sql)) {
+				$last_id = mysqli_insert_id($link);
+				echo '<h5 class="bd-form"> New record created successfully. Last inserted ID is: ' . $last_id . '</h5>';
+			  } else {
+				echo '<h5 class="bd-form" style="color: red;">Error: ' . $sql . '<br>' . mysqli_error($link) . '</h5>';
+			  }*/
+
+              break;
+          case 'delete':
+              $sql = $operacao . ' from users where id = ' . $dados . ';';
+              echo '<h3 class="bd-form">' . $sql . '</h3>';              
+              
+
+              break;
+          case 'edit':
+              $sql = ' update users set nome = ' . $dados . ';';
+              echo '<h3 class="bd-form">' . $sql . '</h3>';
+              
+              
+
+              break;
+          default:
+              
+              break;
+      	}
+      } else {
+        echo '<h3 class="bd-form"> Nenhuma operação selecionada! </h3>';
+      }
+
+      $link->close();
+    ?>
   </body>
 
   <footer class="page-footer">
-  This app is hosted on a
-  <a href="https://www.heroku.com/free">Heroku Free Dyno</a>.
-</footer>
+	  This app is hosted on a
+	  <a href="https://www.heroku.com/free">Heroku Free Dyno</a>.
+  </footer>
 </html>

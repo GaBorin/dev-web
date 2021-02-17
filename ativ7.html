@@ -47,39 +47,38 @@
       </div>
     </nav>
 
-    <h1 class="email-form"> Operações no banco </h1>
+    <h1 class="bd-form"> DB managment </h1>
 
-    <div class="input-group mb-3 bd-form">
-      <label class="input-group-text" for="inputGroupSelect01">Ação</label>
-      <select class="form-select" id="inputOperacao">
-        <option selected>Escolha...</option>
-        <option value="1">Insert</option>
-        <option value="2">Delete</option>
-        <option value="3">Edit</option>
-      </select>
-    </div>
+    <form method="post" action="ativ7.php">
+      <div class="input-group mb-3 bd-form">
+        <label class="input-group-text" for="inputGroupSelect01">Operation</label>
+        <select class="form-select" id="inputOperacao" name="inputOp">
+          <option selected>Escolha...</option>
+          <option value="insert">Insert</option>
+          <option value="delete">Delete</option>
+          <option value="edit">Edit</option>
+        </select>
 
-    <div class="input-group mb-3 bd-form">
-      <span class="input-group-text" id="inputGroup-sizing-default">Tabela</span>
-      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        <span class="input-group-text" id="inputGroup-sizing-default">Username</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="inputUsername">
+      </div>
 
-      <span class="input-group-text" id="inputGroup-sizing-default">Dados</span>
-      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-      <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Send</button>
-    </div>
+      <div class="input-group mb-3 bd-form">
+        
 
-    <?php
-      $operacao = $_POST['inputOperacao'];
+        <span class="input-group-text" id="inputGroup-sizing-default">E-mail</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="inputEmail">
 
-      if($operacao != "Escolha..."){
-        echo '<h2> $operacao </h2>';
-      }
-    ?>
+        <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="inputPassword">
 
+        <input class="btn btn-outline-secondary" type="submit" value="Submit">
+      </div>
+    </form>
   </body>
 
   <footer class="page-footer">
-  This app is hosted on a
-  <a href="https://www.heroku.com/free">Heroku Free Dyno</a>.
-</footer>
+    This app is hosted on a
+    <a href="https://www.heroku.com/free">Heroku Free Dyno</a>.
+  </footer>
 </html>
