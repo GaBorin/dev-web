@@ -95,12 +95,6 @@
           	  $sql = "INSERT INTO users (username, email, password) VALUES ('" . $username . "', '" . $email . "', '" . $senha . "')";
               
               echo '<h5 class="bd-form">' . $sql . '</h5>';
-              
-              if (mysqli_query($link, $sql)) {
-			    echo "New record created successfully";
-			  } else {
-			    echo "Error: " . $sql . "<br>" . mysqli_error($link);
-			  }
               /*
               if (mysqli_query($link, $sql)) {
 				$last_id = mysqli_insert_id($link);
@@ -108,19 +102,16 @@
 			  } else {
 				echo '<h5 class="bd-form" style="color: red;">Error: ' . $sql . '<br>' . mysqli_error($link) . '</h5>';
 			  }*/
-
               break;
+          
           case 'delete':
-              $sql = $operacao . ' from users where id = ' . $dados . ';';
-              echo '<h3 class="bd-form">' . $sql . '</h3>';              
-              
+              $sql = 'DELETE FROM users WHERE username = ' . $username . ';';
+              echo '<h3 class="bd-form">' . $sql . '</h3>';
 
               break;
           case 'edit':
-              $sql = ' update users set nome = ' . $dados . ';';
+              $sql = 'UPDATE users SET username = \'' . $username . '\', password = \'' . $senha . '\' WHERE email = \'' . $email . '\';';
               echo '<h3 class="bd-form">' . $sql . '</h3>';
-              
-              
 
               break;
           default:
