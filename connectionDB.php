@@ -1,6 +1,6 @@
 <?php
 	// Create connection
-	$link = new MySQLi('localhost', 'borin.eu5.org', '7LFv9hbgWz_FYjh', '242517');
+	$link = new MySQLi('localhost', '242517', '7LFv9hbgWz_FYjh', '242517');
 
 	// Check connection
 	if (!$link) {
