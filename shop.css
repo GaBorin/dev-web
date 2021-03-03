@@ -1,0 +1,35 @@
+.container {
+  max-width: fit-content;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card {
+  min-width: 320px;
+  display: flex;
+  margin-right: 15px;
+  margin-left: 15px;
+  background: #00000070;
+}
+
+.card-deck {
+	min-width: 320px;
+	/*display: flex;
+	margin-right: 15px;
+	margin-left: 15px;*/
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0px, 1fr));
+  /*background: #0000005c;*/
+  color: #87ddff;
+}
+
+.text-muted {
+  color: #759aeb!important;
+}
+
+.inner {
+  color: #005169;
+  mix-blend-mode: difference;
+}

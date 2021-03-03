@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Bootstrap CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+		<link rel="stylesheet" href="cadastro.css">
+
+		<title>Cadastro photo$hop</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="d-flex justify-content-center h-100">
+				<div class="card">
+					<div class="card-header">
+						<h3>Cadastre-se</h3>
+					</div>
+					<div class="card-body">
+						<form method="post" action="cadastro.php">
+							<div class="input-group form-group">
+								<input type="text" class="form-control" placeholder="E-mail" name="email" id="email">
+							</div>
+							<div class="input-group form-group">
+								<input type="text" class="form-control" placeholder="Login" name="login" id="login">
+							</div>
+							<div class="input-group form-group">
+								<input type="password" class="form-control" placeholder="Password" name="senha" id="senha">
+							</div>
+							<div class="form-group">
+								<input type="submit" value="Cadastrar" id="cadastrar" name="cadastrar" class="btn float-right login_btn">
+							</div>
+						</form>
+					</div>
+					<div class="card-footer">
+						<div class="d-flex justify-content-center links">
+							<a href="./login.html" style="color:#DAF7A6;">Voltar para página de Login</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

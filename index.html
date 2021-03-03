@@ -1,97 +1,96 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="pt">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- Bootstrap CSS -->
-	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-	    <link rel="stylesheet" href="css/main.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
 
-	    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	</head>
+    <title>photo$hop</title>
+  </head>
+  <body>
+    <!-- Image and text -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light bd-navbar">
+	  <div class="container-fluid">
+	    <a class="navbar-brand">
+	      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-camera2" viewBox="0 0 16 16">
+			  <path d="M5 8c0-1.657 2.343-3 4-3V4a4 4 0 0 0-4 4z"/>
+			  <path d="M12.318 3h2.015C15.253 3 16 3.746 16 4.667v6.666c0 .92-.746 1.667-1.667 1.667h-2.015A5.97 5.97 0 0 1 9 14a5.972 5.972 0 0 1-3.318-1H1.667C.747 13 0 12.254 0 11.333V4.667C0 3.747.746 3 1.667 3H2a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1h.682A5.97 5.97 0 0 1 9 2c1.227 0 2.367.368 3.318 1zM2 4.5a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0zM14 8A5 5 0 1 0 4 8a5 5 0 0 0 10 0z"/>
+			</svg>
+	      photo$hop
+	    </a>
 
-	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		  <div class="container-fluid">
-		    
-		    <h1 class="navbar-brand">Activities</h1>
+	    <div class="collapse navbar-collapse" id="navbarNav">
+	      <ul class="navbar-nav">
+	        <li class="nav-item">
+	          <a class="nav-link active" aria-current="page" href="./index.html">Photos</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="./shop.html">Shop</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="./admin.html">Admin</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link logout" href="./login.html">Logout</a>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
 
-		    <div class="collapse navbar-collapse" id="navbarText">
-		      <ul class="navbar-nav me-auto mb-2 mb-lg-0 center">
-		      	<li class="nav-item">
-		          <a class="nav-link active" aria-current="page" href="https://ttc-dev-web.herokuapp.com/index.html">Home</a>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" href="https://ttc-dev-web.herokuapp.com/photos.html">Photos</a>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" href="https://ttc-dev-web.herokuapp.com/others.html">Others</a>
-		        </li>
+	<script type="text/javascript">
+  	    $(".img-fluid").addClass("wow fadeIn z-depth-1-half");
+		new WOW().init();
+    </script>
 
-		        <li class="nav-item">
-		          <a class="nav-link" href="https://ttc-dev-web.herokuapp.com/about.html">About</a>
-		        </li>
-		        <li class="nav-item">
-		          <a class="nav-link" href="https://ttc-dev-web.herokuapp.com/contact.html">Contact</a>
-		        </li>
-		      </ul>
-		    </div>
+	<div class="container my-4">
 
-		    <a class="navbar-brand">Home Sweet Home</a>
-		    <!--a class="navbar-brand" href="https://ttc-dev-web.herokuapp.com/index.html">Home Sweet Home</a>
-		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-		      <span class="navbar-toggler-icon"></span>
-		    </button-->
+	    <!--Grid row-->
+	    <div class="row">
 
-		  </div>
-		</nav>
+	      <!--Grid column-->
+	      <div class="col-lg-4 col-md-12 mb-4">
 
-		<!--Navigation bar-->
-		<!--div id="nav-placeholder"></div>
+	        <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(58).jpg" class="img-fluid mb-4" alt="">
 
-		<script>
-			$(function(){
-			  $("#nav-placeholder").load("nav.html");
-			});
-		</script-->
-		<!--end of Navigation bar-->
+	        <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(66).jpg" class="img-fluid mb-4" alt=""
+	          data-wow-delay="0.3s">
 
-		<ul class="list-group list-group-flush email-form">
-		  <li class="list-group-item">
-		  	<a href=https://ttc-dev-web.herokuapp.com/about.html class="purple">Atividade 1: Página Sobre</a>
-		  </li>
-		  <li class="list-group-item">
-		  	<a href=https://ttc-dev-web.herokuapp.com/ativ2.html class="purple">Atividade 2: Curriculo Dog em HTML e CSS</a>
-		  </li>
-		  <li class="list-group-item">
-		  	<a href=https://ttc-dev-web.herokuapp.com/index.html class="purple">Atividade 3: Site com 5 abas</a>
-		  </li>
-		  <li class="list-group-item">
-		  	<a href=https://ttc-dev-web.herokuapp.com/contact.html class="purple">Atividade 4: Página Contato com Forms</a>
-		  </li>
-		  <li class="list-group-item">
-		  	<a href=https://ttc-dev-web.herokuapp.com/ativ5.html class="purple">Atividade 5: PHP básico</a>
-		  </li>
-		  <li class="list-group-item">
-		  	<a href=https://ttc-dev-web.herokuapp.com/photos.html class="purple">Atividade 6: SQL básico</a>
-		  </li>
-		  <li class="list-group-item">
-		  	<a href=https://ttc-dev-web.herokuapp.com/ativ7.html class="purple">Atividade 7: PHP + banco de dados</a>
-		  </li>
-		  <li class="list-group-item">
-		  	<a href=https://ttc-dev-web.herokuapp.com/trab.html class="purple">Trabalho Final</a>
-		  </li>
-		</ul>
-	</body>
-	
-	<!--Footer bar-->
-	<div id="footer-placeholder"></div>
+	      </div>
+	      <!--Grid column-->
 
-	<script>
-		$(function(){
-		  $("#footer-placeholder").load("footer.html");
-		});
-	</script>
-	 <!--end of Footer bar-->
+	      <!--Grid column-->
+	      <div class="col-lg-4 col-md-6 mb-4">
+
+	        <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(74).jpg" class="img-fluid mb-4" alt=""
+	          data-wow-delay="0.1s">
+
+	        <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(64).jpg" class="img-fluid mb-4" alt=""
+	          data-wow-delay="0.4s">
+
+	      </div>
+	      <!--Grid column-->
+
+	      <!--Grid column-->
+	      <div class="col-lg-4 col-md-6 mb-4">
+
+	        <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(77).jpg" class="img-fluid mb-4" alt=""
+	          data-wow-delay="0.2s">
+
+	        <img src="http://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(67).jpg" class="img-fluid mb-4" alt=""
+	          data-wow-delay="0.5s">
+
+	      </div>
+	      <!--Grid column-->
+
+	    </div>
+	    <!--Grid row-->
+
+	  </div>
+
+  </body>
 </html>
